@@ -11,8 +11,13 @@ function random(arreglo) {
     random = Math.floor(random)
     return arreglo[random]
 }
-let excuse =`${random(who)} ${random(action)} ${random (what)} ${random(when)}`
+let excuse = `${random(who)} ${random(action)} ${random(what)} ${random(when)}`
 console.log(excuse)
-window.onload = function(){
+
+window.onload = function () {
     document.querySelector("#excuse").innerHTML = excuse
+    document.querySelector("#boton").addEventListener("click", () => {
+        excuse = `${random(who)} ${random(action)} ${random(what)} ${random(when)}`        
+        document.querySelector("#excuse").innerHTML = excuse
+    });
 }
