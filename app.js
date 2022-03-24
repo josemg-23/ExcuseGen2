@@ -13,3 +13,6 @@ function random(arreglo) {
 }
 let excuse =`${random(who)} ${random(action)} ${random (what)} ${random(when)}`
 console.log(excuse)
+window.onload = function(){
+    document.querySelector("#excuse").innerHTML = excuse
+}
